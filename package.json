@@ -1,20 +1,20 @@
 {
-  "name": "stellar-project",
-  "version": "0.0.0",
-  "private": true,
+  "name": "xlm-project",
+  "version": "1.0.0",
+  "description": "A project developed for the Stellar Network",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vberezny/XLM-project.git"
   },
-  "devDependencies": {
-    "concurrently": "^3.5.1"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vberezny/XLM-project/issues"
+  },
+  "homepage": "https://github.com/vberezny/XLM-project#readme"
 }
