@@ -4,6 +4,7 @@
     "rules": {
         "no-console": 0,
         "react/forbit-prop-types": 0,
-        "linebreak-style": 0
+        "linebreak-style": 0,
+        "import/extensions": 0
     }
 }
