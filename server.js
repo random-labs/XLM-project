@@ -1,27 +1,25 @@
 const express = require('express');
-const favicon = require('serve-favicon');
-
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 const app = express();
-
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.send({
-    message: err.message,
-    error: err
-  })
+ 
+const compiler = webpack(webpackConfig);
+ 
+app.use(express.static(__dirname + '/www'));
+ 
+app.use(webpackDevMiddleware(compiler, {
+  hot: true,
+  filename: 'bundle.js',
+  publicPath: '/',
+  stats: {
+    colors: true,
+  },
+  historyApiFallback: true,
+}));
+ 
+const server = app.listen(3000, function() {
+  const host = server.address().address;
+  const port = server.address().port;
+  console.log('Example app listening at http://%s:%s', host, port);
 });
-
-module.exports = app;
