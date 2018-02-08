@@ -1,0 +1,12 @@
+version: '3.0'
+
+services:
+  xlm_web:
+    build:
+      context: ../
+      dockerfile: deploy/xlmWeb.dockerfile
+    volumes:
+      - ../:/user/src/app
+    ports:
+      - "3001:3001"
+    tty: true
