@@ -2,11 +2,12 @@ version: '3.0'
 
 services:
   xlm_web:
+    container_name: "xlm_web"
     build:
       context: ../
       dockerfile: deploy/xlmWeb.dockerfile
     volumes:
-      - ../:/user/src/app
+      - ../:/usr/src/app
     ports:
-      - "3001:3001"
-    tty: true
+      - "3000:3000"
+    command: bash -c "npm start"
