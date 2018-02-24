@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import DonateButton from './DonateButton';
+import NavBar from './NavBar';
 
 class App extends Component {
   render() {
     return (
-      <div className={App}>
-        <header>
-          <h1>Donate Pls</h1>
-        </header>
-        <DonateButton />
-      </div>
-
+        <MuiThemeProvider>
+          <div>
+            <NavBar />
+            <DonateButton />
+          </div>
+        </MuiThemeProvider>
     );
   }
 }
