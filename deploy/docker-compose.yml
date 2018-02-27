@@ -10,8 +10,4 @@ services:
       - ../:/usr/src/app
     ports:
       - "3000:3000"
-
-    command: bash -c "npm start"
-
-    tty: true
-
+command: bash -c "npm start"
