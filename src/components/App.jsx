@@ -6,12 +6,12 @@ import NavBar from './NavBar';
 class App extends Component {
   render() {
     return (
-        <MuiThemeProvider>
-          <div>
-            <NavBar />
-            <DonateButton />
-          </div>
-        </MuiThemeProvider>
+      <MuiThemeProvider>
+        <div>
+          <NavBar />
+          <DonateButton />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
